@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tramer Değer Hesaplama</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" crossorigin src="./assets/index-BXOVxH-j.js"></script>
+  </head>
+  <body>
+    <div class="container">
+	<h1>Tramer Hasar Kaydı Değer Hesaplama</h1>
+	<form id="converter-form">
+		<table id="data-table">
+			<thead>
+				<tr>
+					<th colspan=4>Güncel Dolar Kuru</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="4"><input type="number" class="current-rate-input" min="0" step="0.0001" required /></td>
+				</tr>
+			</tbody>
+			<thead>
+				<tr>
+					<th>Tarih (YYYY-MM-DD)</th>
+					<th>Hasar TL Tutarı</th>
+					<th>USD Kuru</th>
+					<th>Eylem</th>
+				</tr>
+			</thead>
+			<tbody id="table-body">
+				<tr>
+					<td><input type="date" class="date-input" required /></td>
+					<td><input type="number" class="amount-input" min="0" step="0.01" required /></td>
+					<td><input type="number" class="rate-input" min="0" step="0.0001" required /></td>
+					<td><button type="button" class="remove-row">Sil</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="table-actions">
+			<button type="button" id="add-row">Kayıt Ekle</button>
+			<button type="submit" id="submit">Hesapla</button>
+		</div>
+		<div id="total-amount" class="total">Toplam Hasar TL: 0.00</div>
+	</form>
+	<div id="result" class="result"></div>
+    </div>
+  </body>
+</html>
